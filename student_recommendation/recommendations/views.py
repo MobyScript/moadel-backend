@@ -6,6 +6,10 @@ import random
 
 from .models import Student, Course, Grade
 
+# 202011015 - Fahad
+# سعد-  202011016 
+# 202211007 - خالد الحربي
+
 def generate_dummy_data():
     years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026] 
     majors = [
@@ -41,10 +45,81 @@ def generate_dummy_data():
         {"ar": "الفيزياء العامة", "en": "General Physics", "category": "Physics", "credits": 3},
         {"ar": "الكيمياء العضوية", "en": "Organic Chemistry", "category": "Chemistry", "credits": 3},
         {"ar": "الهندسة الحرارية", "en": "Thermal Engineering", "category": "Mechanical Engineering", "credits": 3},
-        {"ar": "إدارة المشاريع", "en": "Project Management", "category": "Business", "credits": 3}
+        {"ar": "إدارة المشاريع", "en": "Project Management", "category": "Business", "credits": 3},
+        {"ar": "تصميم وتحليل الخوارزميات", "en": "Algorithm Design & Analysis", "category": "Programming", "credits": 3},
+        {"ar": "تطوير تطبيقات الويب", "en": "Web Application Development", "category": "Programming", "credits": 3},
+        {"ar": "هندسة البرمجيات", "en": "Software Engineering", "category": "Programming", "credits": 3},
+        {"ar": "أمن المعلومات", "en": "Information Security", "category": "Cybersecurity", "credits": 3},
+        {"ar": "إدارة نظم المعلومات", "en": "Information Systems Management", "category": "Business", "credits": 3},
+        {"ar": "تحليل البيانات الضخمة", "en": "Big Data Analytics", "category": "Data Science", "credits": 3},
+        {"ar": "إدارة الشبكات", "en": "Network Management", "category": "Networking", "credits": 3},
+        {"ar": "أساسيات الروبوتات", "en": "Introduction to Robotics", "category": "AI", "credits": 3},
+        {"ar": "الإلكترونيات الرقمية", "en": "Digital Electronics", "category": "Electrical Engineering", "credits": 3},
+        {"ar": "التصميم المنطقي", "en": "Logic Design", "category": "Electrical Engineering", "credits": 3},
+        {"ar": "الرياضيات المتقدمة", "en": "Advanced Mathematics", "category": "Mathematics", "credits": 3},
+        {"ar": "الإحصاء التطبيقي", "en": "Applied Statistics", "category": "Mathematics", "credits": 3},
+        {"ar": "التحليل العددي", "en": "Numerical Analysis", "category": "Mathematics", "credits": 3},
+        {"ar": "الفيزياء النووية", "en": "Nuclear Physics", "category": "Physics", "credits": 3},
+        {"ar": "الكيمياء التحليلية", "en": "Analytical Chemistry", "category": "Chemistry", "credits": 3},
+        {"ar": "الهندسة المدنية", "en": "Civil Engineering", "category": "Civil Engineering", "credits": 3},
+        {"ar": "الهندسة البيئية", "en": "Environmental Engineering", "category": "Civil Engineering", "credits": 3},
+        {"ar": "إدارة الموارد البشرية", "en": "Human Resource Management", "category": "Business", "credits": 3},
+        {"ar": "التسويق الرقمي", "en": "Digital Marketing", "category": "Business", "credits": 3},
+        {"ar": "الاقتصاد الجزئي", "en": "Microeconomics", "category": "Economics", "credits": 3},
+        {"ar": "الاقتصاد الكلي", "en": "Macroeconomics", "category": "Economics", "credits": 3},
+        {"ar": "التحليل المالي", "en": "Financial Analysis", "category": "Finance", "credits": 3},
+        {"ar": "إدارة المخاطر", "en": "Risk Management", "category": "Finance", "credits": 3},
+        {"ar": "الذكاء الاصطناعي المتقدم", "en": "Advanced Artificial Intelligence", "category": "AI", "credits": 3},
+        {"ar": "تعلم عميق", "en": "Deep Learning", "category": "AI", "credits": 3},
+        {"ar": "الروبوتات المتقدمة", "en": "Advanced Robotics", "category": "AI", "credits": 3},
+        {"ar": "الأنظمة المدمجة", "en": "Embedded Systems", "category": "Electrical Engineering", "credits": 3},
+        {"ar": "معالجة الإشارات الرقمية", "en": "Digital Signal Processing", "category": "Electrical Engineering", "credits": 3},
+        {"ar": "الدوائر الكهربائية", "en": "Electrical Circuits", "category": "Electrical Engineering", "credits": 3},
+        {"ar": "تصميم الأنظمة الميكانيكية", "en": "Mechanical System Design", "category": "Mechanical Engineering", "credits": 3},
+        {"ar": "الهندسة الصوتية", "en": "Acoustic Engineering", "category": "Mechanical Engineering", "credits": 3},
+        {"ar": "التحكم الآلي", "en": "Automatic Control", "category": "Mechanical Engineering", "credits": 3},
+        {"ar": "إدارة سلسلة التوريد", "en": "Supply Chain Management", "category": "Business", "credits": 3},
+        {"ar": "تحليل الأعمال", "en": "Business Analytics", "category": "Business", "credits": 3},
+        {"ar": "البرمجة المتوازية", "en": "Parallel Programming", "category": "Programming", "credits": 3},
+        {"ar": "الحوسبة السحابية", "en": "Cloud Computing", "category": "Programming", "credits": 3},
+        {"ar": "الواقع الافتراضي", "en": "Virtual Reality", "category": "Programming", "credits": 3},
+        {"ar": "الواقع المعزز", "en": "Augmented Reality", "category": "Programming", "credits": 3},
+        {"ar": "تحليل الصور الرقمية", "en": "Digital Image Processing", "category": "AI", "credits": 3},
+        {"ar": "التعلم المعزز", "en": "Reinforcement Learning", "category": "AI", "credits": 3},
+        {"ar": "التحليل الطيفي", "en": "Spectroscopy", "category": "Chemistry", "credits": 3},
+        {"ar": "الكيمياء الفيزيائية", "en": "Physical Chemistry", "category": "Chemistry", "credits": 3},
+        {"ar": "الفيزياء الكمية", "en": "Quantum Physics", "category": "Physics", "credits": 3},
+        {"ar": "الفيزياء الفلكية", "en": "Astrophysics", "category": "Physics", "credits": 3},
+        {"ar": "الرياضيات التطبيقية", "en": "Applied Mathematics", "category": "Mathematics", "credits": 3},
+        {"ar": "الجبر الخطي", "en": "Linear Algebra", "category": "Mathematics", "credits": 3},
+        {"ar": "نظرية الأعداد", "en": "Number Theory", "category": "Mathematics", "credits": 3},
+        {"ar": "التحليل الحقيقي", "en": "Real Analysis", "category": "Mathematics", "credits": 3},
+        {"ar": "التحليل المركب", "en": "Complex Analysis", "category": "Mathematics", "credits": 3},
+        {"ar": "الأنظمة الديناميكية", "en": "Dynamical Systems", "category": "Mathematics", "credits": 3},
+        {"ar": "التحليل العددي المتقدم", "en": "Advanced Numerical Analysis", "category": "Mathematics", "credits": 3},
+        {"ar": "الأنظمة الذكية", "en": "Intelligent Systems", "category": "AI", "credits": 3},
+        {"ar": "الروبوتات التعاونية", "en": "Collaborative Robotics", "category": "AI", "credits": 3},
+        {"ar": "الأنظمة السيبرانية", "en": "Cyber-Physical Systems", "category": "Cybersecurity", "credits": 3},
+        {"ar": "أمن الشبكات", "en": "Network Security", "category": "Cybersecurity", "credits": 3},
+        {"ar": "إدارة البيانات الضخمة", "en": "Big Data Management", "category": "Data Science", "credits": 3},
+        {"ar": "تحليل النصوص", "en": "Text Analytics", "category": "Data Science", "credits": 3},
+        {"ar": "التعلم الآلي المتقدم", "en": "Advanced Machine Learning", "category": "AI", "credits": 3},
+        {"ar": "البرمجة الوظيفية", "en": "Functional Programming", "category": "Programming", "credits": 3},
+        {"ar": "البرمجة الكائنية", "en": "Object-Oriented Programming", "category": "Programming", "credits": 3},
+        {"ar": "البرمجة المنطقية", "en": "Logic Programming", "category": "Programming", "credits": 3},
+        {"ar": "التصميم التفاعلي", "en": "Interactive Design", "category": "Programming", "credits": 3},
+        {"ar": "تصميم الألعاب", "en": "Game Design", "category": "Programming", "credits": 3},
+        {"ar": "الرسوميات الحاسوبية", "en": "Computer Graphics", "category": "Programming", "credits": 3},
+        {"ar": "الأنظمة الموزعة", "en": "Distributed Systems", "category": "Programming", "credits": 3},
+        {"ar": "الذكاء الاصطناعي للألعاب", "en": "AI for Games", "category": "AI", "credits": 3},
+        {"ar": "الروبوتات الصناعية", "en": "Industrial Robotics", "category": "AI", "credits": 3},
+        {"ar": "التحليل المالي المتقدم", "en": "Advanced Financial Analysis", "category": "Finance", "credits": 3},
+        {"ar": "إدارة الاستثمار", "en": "Investment Management", "category": "Finance", "credits": 3},
+        {"ar": "إدارة الابتكار", "en": "Innovation Management", "category": "Business", "credits": 3},
+        {"ar": "إدارة التغيير", "en": "Change Management", "category": "Business", "credits": 3}
     ]
     
-    for _ in range(10):
+    for _ in range(100):
         student_id = f"{random.choice(years)}{random.randint(10, 99)}{random.randint(100, 999)}"
         name = random.choice(names)
         major = random.choice(majors)

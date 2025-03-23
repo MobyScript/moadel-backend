@@ -30,7 +30,10 @@ def generate_dummy_data():
         {"ar": "عبدالله الشمري", "en": "Abdullah Al-Shammari"},
         {"ar": "نورة العبدالله", "en": "Noura Al-Abdullah"},
         {"ar": "علي الحربي", "en": "Ali Al-Harbi"},
-        {"ar": "ريم العتيبي", "en": "Reem Al-Otaibi"}
+        {"ar": "ريم العتيبي", "en": "Reem Al-Otaibi"},
+        {"ar": "فهد الحربي", "en": "Fahad Al-Harbi"},  # 202011015
+        {"ar": "سعدالحربي", "en": "Saad Al-Harbi"},  # 202011016
+        {"ar": "خالد الحربي", "en": "Khaled Al-Harbi"}  # 202211007
     ]
     courses = [
         {"id": "CSC201", "ar": "برمجة 1", "en": "Programming 1", "category": "Programming", "credits": 3},

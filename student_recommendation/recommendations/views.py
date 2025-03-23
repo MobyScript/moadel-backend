@@ -11,7 +11,9 @@ from .models import Student, Course, Grade
 # 202211007 - خالد الحربي
 
 def generate_dummy_data():
-    years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026] 
+
+    years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+
     majors = [
         {"ar": "علوم الحاسب", "en": "Computer Science"},
         {"ar": "الهندسة الكهربائية", "en": "Electrical Engineering"},
@@ -19,8 +21,22 @@ def generate_dummy_data():
         {"ar": "إدارة الأعمال", "en": "Business Administration"},
         {"ar": "الهندسة الميكانيكية", "en": "Mechanical Engineering"},
         {"ar": "الفيزياء", "en": "Physics"},
-        {"ar": "الكيمياء", "en": "Chemistry"}
+        {"ar": "الكيمياء", "en": "Chemistry"},
+        {"ar": "الهندسة المدنية", "en": "Civil Engineering"},
+        {"ar": "الهندسة البيئية", "en": "Environmental Engineering"},
+        {"ar": "الاقتصاد", "en": "Economics"},
+        {"ar": "الذكاء الاصطناعي", "en": "Artificial Intelligence"},
+        {"ar": "الأمن السيبراني", "en": "Cybersecurity"},
+        {"ar": "علوم البيانات", "en": "Data Science"},
+        {"ar": "الهندسة الصناعية", "en": "Industrial Engineering"},
+        {"ar": "التسويق", "en": "Marketing"},
+        {"ar": "التمويل", "en": "Finance"},
+        {"ar": "الهندسة المعمارية", "en": "Architecture"},
+        {"ar": "علم الأحياء", "en": "Biology"},
+        {"ar": "الطب", "en": "Medicine"},
+        {"ar": "الصيدلة", "en": "Pharmacy"}
     ]
+
     names = [
         {"ar": "محمد العتيبي", "en": "Mohammed Al-Otaibi"},
         {"ar": "أحمد السعيد", "en": "Ahmed Al-Saeed"},
@@ -31,9 +47,22 @@ def generate_dummy_data():
         {"ar": "نورة العبدالله", "en": "Noura Al-Abdullah"},
         {"ar": "علي الحربي", "en": "Ali Al-Harbi"},
         {"ar": "ريم العتيبي", "en": "Reem Al-Otaibi"},
-        {"ar": "فهد الحربي", "en": "Fahad Al-Harbi"},  # 202011015
-        {"ar": "سعدالحربي", "en": "Saad Al-Harbi"},  # 202011016
-        {"ar": "خالد الحربي", "en": "Khaled Al-Harbi"}  # 202211007
+        {"ar": "يوسف القحطاني", "en": "Yousef Al-Qahtani"},
+        {"ar": "منى الغامدي", "en": "Mona Al-Ghamdi"},
+        {"ar": "عبدالعزيز السبيعي", "en": "Abdulaziz Al-Subaie"},
+        {"ar": "هدى العبدالكريم", "en": "Huda Al-Abdulkarim"},
+        {"ar": "ماجد الزهراني", "en": "Majed Al-Zahrani"},
+        {"ar": "لطيفة السالم", "en": "Latifa Al-Salem"},
+        {"ar": "سلمان العتيبي", "en": "Salman Al-Otaibi"},
+        {"ar": "أمل الحربي", "en": "Amal Al-Harbi"},
+        {"ar": "راشد المطيري", "en": "Rashed Al-Mutairi"},
+        {"ar": "نوف الشمري", "en": "Nouf Al-Shammari"},
+        {"ar": "بدر العبدالله", "en": "Badr Al-Abdullah"},
+    ]
+    students = [
+        {"student_id": "202011015", "ar": "فهد الحربي", "en": "Fahad Al-Harbi"},
+        {"student_id": "202011016", "ar": "سعد الحربي", "en": "Saad Al-Harbi"},
+        {"student_id": "202211007", "ar": "خالد الحربي", "en": "Khaled Al-Harbi"},
     ]
     courses = [
         {"id": "CSC201", "ar": "برمجة 1", "en": "Programming 1", "category": "Programming", "credits": 3},
@@ -71,9 +100,40 @@ def generate_dummy_data():
         {"id": "ECO201", "ar": "الاقتصاد الجزئي", "en": "Microeconomics", "category": "Economics", "credits": 3},
         {"id": "ECO202", "ar": "الاقتصاد الكلي", "en": "Macroeconomics", "category": "Economics", "credits": 3},
         {"id": "FIN201", "ar": "التحليل المالي", "en": "Financial Analysis", "category": "Finance", "credits": 3},
-        {"id": "FIN202", "ar": "إدارة المخاطر", "en": "Risk Management", "category": "Finance", "credits": 3}
+        {"id": "FIN202", "ar": "إدارة المخاطر", "en": "Risk Management", "category": "Finance", "credits": 3},
+        {"id": "CSC308", "ar": "أنظمة التشغيل", "en": "Operating Systems", "category": "Programming", "credits": 3},
+        {"id": "CSC309", "ar": "الحوسبة السحابية", "en": "Cloud Computing", "category": "Programming", "credits": 3},
+        {"id": "DS302", "ar": "التصور البياني للبيانات", "en": "Data Visualization", "category": "Data Science", "credits": 3},
+        {"id": "AI301", "ar": "معالجة اللغة الطبيعية", "en": "Natural Language Processing", "category": "AI", "credits": 3},
+        {"id": "AI302", "ar": "رؤية الحاسوب", "en": "Computer Vision", "category": "AI", "credits": 3},
+        {"id": "CYB202", "ar": "اختبار الاختراق", "en": "Penetration Testing", "category": "Cybersecurity", "credits": 3},
+        {"id": "CYB203", "ar": "التشفير", "en": "Cryptography", "category": "Cybersecurity", "credits": 3},
+        {"id": "PHY202", "ar": "فيزياء الكم", "en": "Quantum Physics", "category": "Physics", "credits": 3},
+        {"id": "CHE202", "ar": "الكيمياء الفيزيائية", "en": "Physical Chemistry", "category": "Chemistry", "credits": 3},
+        {"id": "BUS305", "ar": "إدارة العمليات", "en": "Operations Management", "category": "Business", "credits": 3}
     ]
-    for _ in range(100):
+
+
+    for student_data in students:
+        student, created = Student.objects.get_or_create(
+            student_id=student_data["student_id"],
+            defaults={"name_ar": student_data["ar"], "name_en": student_data["en"], "program_ar": "علوم الحاسب", "program_en": "Computer Science"}
+        )
+        
+        if created:  # Only assign courses if student was newly created
+            taken_courses = random.sample(courses, k=3)  # Assign 3 random courses
+            for course in taken_courses:
+                course_obj, _ = Course.objects.get_or_create(
+                    name_ar=course["ar"],
+                    name_en=course["en"],
+                    category=course["category"],
+                    credits=course["credits"]
+                )
+                Grade.objects.create(student=student, course=course_obj, score=random.uniform(60, 100))
+
+        return "All students added successfully!"
+
+    for _ in range(50):
         student_id = f"{random.choice(years)}{random.randint(10, 99)}{random.randint(100, 999)}"
         name = random.choice(names)
         major = random.choice(majors)
@@ -100,9 +160,6 @@ def calculate_recommendations(student):
     all_courses = Course.objects.all()
     recommended = []
 
-    # Filter courses based on the student's major
-    major_courses = [course for course in all_courses if course.category == student.program_en]
-
     # Group taken courses by category
     category_scores = {}
     for course_name, (score, category) in taken_courses.items():
@@ -113,19 +170,44 @@ def calculate_recommendations(student):
     # Calculate average score per category
     category_avg = {category: sum(scores) / len(scores) for category, scores in category_scores.items()}
 
-    # Recommend courses in the student's major where they are performing well
-    for course in major_courses:
+    # Determine course recommendations
+    for course in all_courses:
         if course.name_en not in taken_courses:
-            if course.category in category_avg and category_avg[course.category] >= 80:  # Adjust threshold as needed
-                recommended.append({
-                    "name_ar": course.name_ar,
-                    "name_en": course.name_en,
-                    "category": course.category,
-                    "credits": course.credits,
-                    "estimatedScore": round(category_avg[course.category], 2)
-                })
+            category = course.category
+            estimated_score = 70  # Default estimated score
 
-    return recommended
+            # Prioritize courses based on previous category performance
+            if category in category_avg:
+                avg_score = category_avg[category]
+                estimated_score = round(avg_score * 1.1 if avg_score >= 80 else avg_score * 0.9, 2)
+
+                # Recommend advanced courses if the student is performing well
+                if avg_score >= 80:
+                    recommended.append({
+                        "name_ar": course.name_ar,
+                        "name_en": course.name_en,
+                        "category": category,
+                        "credits": course.credits,
+                        "estimatedScore": estimated_score,
+                        "type": "Advanced"
+                    })
+
+                # Recommend reinforcement courses if the student is struggling
+                elif avg_score < 60:
+                    recommended.append({
+                        "name_ar": course.name_ar,
+                        "name_en": course.name_en,
+                        "category": category,
+                        "credits": course.credits,
+                        "estimatedScore": estimated_score,
+                        "type": "Reinforcement"
+                    })
+
+    # Sort recommendations by lowest estimated score first (harder courses first)
+    recommended.sort(key=lambda x: x["estimatedScore"])
+
+    return recommended[:5]  # Return top 5 recommendations
+
 
 
 @csrf_exempt

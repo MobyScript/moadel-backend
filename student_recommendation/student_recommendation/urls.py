@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from recommendations.views import get_student_recommendations
+from recommendations.views import get_all_courses
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/student/<str:student_id>/", get_student_recommendations),
+    path("api/all-courses/", get_all_courses),
 ]

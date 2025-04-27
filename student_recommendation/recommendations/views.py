@@ -121,7 +121,14 @@ def generate_dummy_data():
         )
         
         if created:  # Only assign courses if student was newly created
-            taken_courses = random.sample(courses, k=3)  # Assign 3 random courses
+            # Filter courses based on the student's major
+            major_courses = [course for course in courses if course["category"] == "Programming"]
+            other_courses = [course for course in courses if course["category"] != "Programming"]
+            
+            # Select courses: prioritize major courses, then fill with other courses
+            taken_courses = random.sample(major_courses, k=min(len(major_courses), 7))  # 7 major courses
+            taken_courses += random.sample(other_courses, k=min(len(other_courses), 3))  # 3 courses from other categories
+            
             for course in taken_courses:
                 course_obj, _ = Course.objects.get_or_create(
                     name_ar=course["ar"],
@@ -131,7 +138,6 @@ def generate_dummy_data():
                 )
                 Grade.objects.create(student=student, course=course_obj, score=random.uniform(60, 100))
 
-        return "All students added successfully!"
 
     for _ in range(50):
         student_id = f"{random.choice(years)}{random.randint(10, 99)}{random.randint(100, 999)}"
@@ -145,15 +151,18 @@ def generate_dummy_data():
             program_en=major["en"]
         )
         
-        taken_courses = random.sample(courses, k=random.randint(2, len(courses)-1))
+        major_courses = [course for course in courses if course["category"] == major["en"]]
+        taken_courses = random.sample(major_courses, k=min(len(major_courses), random.randint(2, max(2, len(major_courses)))))
         for course in taken_courses:
             course_obj, _ = Course.objects.get_or_create(
-                name_ar=course["ar"],
-                name_en=course["en"],
-                category=course["category"],
-                credits=course["credits"]
+            name_ar=course["ar"],
+            name_en=course["en"],
+            category=course["category"],
+            credits=course["credits"]
             )
             Grade.objects.create(student=student, course=course_obj, score=random.uniform(60, 100))
+
+    return "All students added successfully!"
 
 def calculate_recommendations(student):
     taken_courses = {grade.course.name_en: (grade.score, grade.course.category) for grade in student.grades.all()}
@@ -216,6 +225,18 @@ def get_student_recommendations(request, student_id):
     recommendations = calculate_recommendations(student)
     current_gpa = calculate_gpa(student)
 
+    # Get courses taken with scores
+    taken_courses = [
+        {
+            "course_name_ar": grade.course.name_ar,
+            "course_name_en": grade.course.name_en,
+            "category": grade.course.category,
+            "credits": grade.course.credits,
+            "score": grade.score,
+        }
+        for grade in student.grades.all()
+    ]
+
     response_data = {
         "student_id": student.student_id,
         "name_ar": student.name_ar,
@@ -223,6 +244,7 @@ def get_student_recommendations(request, student_id):
         "program_ar": student.program_ar,
         "program_en": student.program_en,
         "current_gpa": current_gpa,
+        "takenCourses": taken_courses,
         "recommendedCourses": recommendations,
     }
 
@@ -278,6 +300,20 @@ def estimate_gpa_change(student, course_name, selected_grade):
     Grade.objects.filter(student=student, course=course).delete()
 
     return new_gpa
+
+
+def get_all_courses(request):
+    courses = Course.objects.all()
+    course_list = [
+        {
+            "name_ar": course.name_ar,
+            "name_en": course.name_en,
+            "category": course.category,
+            "credits": course.credits,
+        }
+        for course in courses
+    ]
+    return JsonResponse(course_list, safe=False)
 
 @csrf_exempt
 def generate_and_return_dummy_data(request):

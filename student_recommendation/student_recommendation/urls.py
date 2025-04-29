@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from recommendations.views import get_student_recommendations
-from recommendations.views import get_all_courses
+from recommendations.views import get_all_courses, get_all_students, create_new_dummy_data
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/student/<str:student_id>/", get_student_recommendations),
     path("api/all-courses/", get_all_courses),
+    path("api/all-students/", get_all_students),
+    path('api/reset-dummy-data/', create_new_dummy_data, name='reset_dummy_data'),
+
 ]

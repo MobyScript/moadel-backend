@@ -16,25 +16,10 @@ def generate_dummy_data():
 
     majors = [
         {"ar": "علوم الحاسب", "en": "Computer Science", "total_credits": 120},
-        {"ar": "الهندسة الكهربائية", "en": "Electrical Engineering", "total_credits": 130},
-        {"ar": "الرياضيات", "en": "Mathematics", "total_credits": 110},
-        {"ar": "إدارة الأعمال", "en": "Business Administration", "total_credits": 115},
-        {"ar": "الهندسة الميكانيكية", "en": "Mechanical Engineering", "total_credits": 125},
-        {"ar": "الفيزياء", "en": "Physics", "total_credits": 110},
-        {"ar": "الكيمياء", "en": "Chemistry", "total_credits": 110},
-        {"ar": "الهندسة المدنية", "en": "Civil Engineering", "total_credits": 130},
-        {"ar": "الهندسة البيئية", "en": "Environmental Engineering", "total_credits": 120},
-        {"ar": "الاقتصاد", "en": "Economics", "total_credits": 115},
         {"ar": "الذكاء الاصطناعي", "en": "Artificial Intelligence", "total_credits": 120},
         {"ar": "الأمن السيبراني", "en": "Cybersecurity", "total_credits": 120},
         {"ar": "علوم البيانات", "en": "Data Science", "total_credits": 120},
-        {"ar": "الهندسة الصناعية", "en": "Industrial Engineering", "total_credits": 125},
-        {"ar": "التسويق", "en": "Marketing", "total_credits": 115},
-        {"ar": "التمويل", "en": "Finance", "total_credits": 115},
-        {"ar": "الهندسة المعمارية", "en": "Architecture", "total_credits": 135},
-        {"ar": "علم الأحياء", "en": "Biology", "total_credits": 110},
-        {"ar": "الطب", "en": "Medicine", "total_credits": 180},
-        {"ar": "الصيدلة", "en": "Pharmacy", "total_credits": 160}
+        {"ar": "هندسة البرمجيات", "en": "Software Engineering", "total_credits": 120}
     ]
 
     names = [
@@ -72,107 +57,19 @@ def generate_dummy_data():
         {"id": "CSC203", "ar": "هياكل بيانات", "en": "Data Structures", "category": "Programming", "credits": 3},
         {"id": "CSC204", "ar": "شبكات الحاسوب", "en": "Computer Networks", "category": "Networking", "credits": 2},
         {"id": "CSC205", "ar": "إدارة قواعد البيانات", "en": "Database Management", "category": "Databases", "credits": 3},
-        {"id": "ARB101", "ar": "أدب عربي", "en": "Arabic Literature", "category": "Arabic", "credits": 2},
-        {"id": "ARB102", "ar": "قواعد اللغة العربية", "en": "Arabic Grammar", "category": "Arabic", "credits": 2},
         {"id": "CSC301", "ar": "الذكاء الاصطناعي", "en": "Artificial Intelligence", "category": "AI", "credits": 3},
         {"id": "CSC302", "ar": "تعلم الآلة", "en": "Machine Learning", "category": "AI", "credits": 3},
-        {"id": "PHY101", "ar": "الفيزياء العامة", "en": "General Physics", "category": "Physics", "credits": 3},
-        {"id": "CHE101", "ar": "الكيمياء العضوية", "en": "Organic Chemistry", "category": "Chemistry", "credits": 3},
-        {"id": "MEC201", "ar": "الهندسة الحرارية", "en": "Thermal Engineering", "category": "Mechanical Engineering", "credits": 3},
-        {"id": "BUS301", "ar": "إدارة المشاريع", "en": "Project Management", "category": "Business", "credits": 3},
         {"id": "CSC303", "ar": "تصميم وتحليل الخوارزميات", "en": "Algorithm Design & Analysis", "category": "Programming", "credits": 3},
         {"id": "CSC304", "ar": "تطوير تطبيقات الويب", "en": "Web Application Development", "category": "Programming", "credits": 3},
         {"id": "CSC305", "ar": "هندسة البرمجيات", "en": "Software Engineering", "category": "Programming", "credits": 3},
-        {"id": "CYB201", "ar": "أمن المعلومات", "en": "Information Security", "category": "Cybersecurity", "credits": 3},
-        {"id": "BUS302", "ar": "إدارة نظم المعلومات", "en": "Information Systems Management", "category": "Business", "credits": 3},
-        {"id": "DS301", "ar": "تحليل البيانات الضخمة", "en": "Big Data Analytics", "category": "Data Science", "credits": 3},
         {"id": "CSC306", "ar": "إدارة الشبكات", "en": "Network Management", "category": "Networking", "credits": 3},
         {"id": "CSC307", "ar": "أساسيات الروبوتات", "en": "Introduction to Robotics", "category": "AI", "credits": 3},
-        {"id": "ELE201", "ar": "الإلكترونيات الرقمية", "en": "Digital Electronics", "category": "Electrical Engineering", "credits": 3},
-        {"id": "ELE202", "ar": "التصميم المنطقي", "en": "Logic Design", "category": "Electrical Engineering", "credits": 3},
-        {"id": "MAT201", "ar": "الرياضيات المتقدمة", "en": "Advanced Mathematics", "category": "Mathematics", "credits": 3},
-        {"id": "MAT202", "ar": "الإحصاء التطبيقي", "en": "Applied Statistics", "category": "Mathematics", "credits": 3},
-        {"id": "MAT203", "ar": "التحليل العددي", "en": "Numerical Analysis", "category": "Mathematics", "credits": 3},
-        {"id": "PHY201", "ar": "الفيزياء النووية", "en": "Nuclear Physics", "category": "Physics", "credits": 3},
-        {"id": "CHE201", "ar": "الكيمياء التحليلية", "en": "Analytical Chemistry", "category": "Chemistry", "credits": 3},
-        {"id": "CIV201", "ar": "الهندسة المدنية", "en": "Civil Engineering", "category": "Civil Engineering", "credits": 3},
-        {"id": "CIV202", "ar": "الهندسة البيئية", "en": "Environmental Engineering", "category": "Civil Engineering", "credits": 3},
-        {"id": "BUS303", "ar": "إدارة الموارد البشرية", "en": "Human Resource Management", "category": "Business", "credits": 3},
-        {"id": "BUS304", "ar": "التسويق الرقمي", "en": "Digital Marketing", "category": "Business", "credits": 3},
-        {"id": "ECO201", "ar": "الاقتصاد الجزئي", "en": "Microeconomics", "category": "Economics", "credits": 3},
-        {"id": "ECO202", "ar": "الاقتصاد الكلي", "en": "Macroeconomics", "category": "Economics", "credits": 3},
-        {"id": "FIN201", "ar": "التحليل المالي", "en": "Financial Analysis", "category": "Finance", "credits": 3},
-        {"id": "FIN202", "ar": "إدارة المخاطر", "en": "Risk Management", "category": "Finance", "credits": 3},
         {"id": "CSC308", "ar": "أنظمة التشغيل", "en": "Operating Systems", "category": "Programming", "credits": 3},
         {"id": "CSC309", "ar": "الحوسبة السحابية", "en": "Cloud Computing", "category": "Programming", "credits": 3},
-        {"id": "DS302", "ar": "التصور البياني للبيانات", "en": "Data Visualization", "category": "Data Science", "credits": 3},
-        {"id": "AI301", "ar": "معالجة اللغة الطبيعية", "en": "Natural Language Processing", "category": "AI", "credits": 3},
-        {"id": "AI302", "ar": "رؤية الحاسوب", "en": "Computer Vision", "category": "AI", "credits": 3},
-        {"id": "CYB202", "ar": "اختبار الاختراق", "en": "Penetration Testing", "category": "Cybersecurity", "credits": 3},
-        {"id": "CYB203", "ar": "التشفير", "en": "Cryptography", "category": "Cybersecurity", "credits": 3},
-        {"id": "PHY202", "ar": "فيزياء الكم", "en": "Quantum Physics", "category": "Physics", "credits": 3},
-        {"id": "CHE202", "ar": "الكيمياء الفيزيائية", "en": "Physical Chemistry", "category": "Chemistry", "credits": 3},
-        {"id": "BUS305", "ar": "إدارة العمليات", "en": "Operations Management", "category": "Business", "credits": 3},
         {"id": "CSC310", "ar": "أمن التطبيقات", "en": "Application Security", "category": "Cybersecurity", "credits": 3},
         {"id": "CSC311", "ar": "تحليل البرمجيات", "en": "Software Analysis", "category": "Programming", "credits": 3},
-        {"id": "DS303", "ar": "التعلم العميق", "en": "Deep Learning", "category": "Data Science", "credits": 3},
-        {"id": "AI303", "ar": "الروبوتات المتقدمة", "en": "Advanced Robotics", "category": "AI", "credits": 3},
-        {"id": "ELE203", "ar": "أنظمة التحكم", "en": "Control Systems", "category": "Electrical Engineering", "credits": 3},
-        {"id": "MAT204", "ar": "الجبر الخطي", "en": "Linear Algebra", "category": "Mathematics", "credits": 3},
-        {"id": "PHY203", "ar": "فيزياء المواد", "en": "Material Physics", "category": "Physics", "credits": 3},
-        {"id": "CHE203", "ar": "الكيمياء الحيوية", "en": "Biochemistry", "category": "Chemistry", "credits": 3},
-        {"id": "BUS306", "ar": "إدارة الابتكار", "en": "Innovation Management", "category": "Business", "credits": 3},
-        {"id": "ECO203", "ar": "الاقتصاد الدولي", "en": "International Economics", "category": "Economics", "credits": 3},
-        {"id": "BIO101", "ar": "علم الأحياء العام", "en": "General Biology", "category": "Biology", "credits": 3},
-        {"id": "BIO102", "ar": "علم الوراثة", "en": "Genetics", "category": "Biology", "credits": 3},
-        {"id": "MED101", "ar": "تشريح الإنسان", "en": "Human Anatomy", "category": "Medicine", "credits": 4},
-        {"id": "MED102", "ar": "علم وظائف الأعضاء", "en": "Physiology", "category": "Medicine", "credits": 4},
-        {"id": "PHR101", "ar": "الكيمياء الصيدلانية", "en": "Pharmaceutical Chemistry", "category": "Pharmacy", "credits": 3},
-        {"id": "PHR102", "ar": "علم الأدوية", "en": "Pharmacology", "category": "Pharmacy", "credits": 3},
-        {"id": "ARC101", "ar": "أساسيات التصميم المعماري", "en": "Architectural Design Basics", "category": "Architecture", "credits": 3},
-        {"id": "ARC102", "ar": "تاريخ العمارة", "en": "History of Architecture", "category": "Architecture", "credits": 3},
-        {"id": "ENV101", "ar": "مقدمة في الهندسة البيئية", "en": "Introduction to Environmental Engineering", "category": "Environmental Engineering", "credits": 3},
-        {"id": "ENV102", "ar": "إدارة النفايات", "en": "Waste Management", "category": "Environmental Engineering", "credits": 3},
-        {"id": "BIO103", "ar": "علم الأحياء الدقيقة", "en": "Microbiology", "category": "Biology", "credits": 3},
-        {"id": "MED103", "ar": "علم الأمراض", "en": "Pathology", "category": "Medicine", "credits": 4},
-        {"id": "PHR103", "ar": "الصيدلة السريرية", "en": "Clinical Pharmacy", "category": "Pharmacy", "credits": 3},
-        {"id": "ARC103", "ar": "تصميم المباني الخضراء", "en": "Green Building Design", "category": "Architecture", "credits": 3},
-        {"id": "ENV103", "ar": "التغير المناخي", "en": "Climate Change", "category": "Environmental Engineering", "credits": 3},
-        {"id": "ELE204", "ar": "أنظمة الطاقة المتجددة", "en": "Renewable Energy Systems", "category": "Electrical Engineering", "credits": 3},
-        {"id": "MAT205", "ar": "نظرية الأعداد", "en": "Number Theory", "category": "Mathematics", "credits": 3},
-        {"id": "PHY204", "ar": "فيزياء البلازما", "en": "Plasma Physics", "category": "Physics", "credits": 3},
-        {"id": "CHE204", "ar": "الكيمياء الصناعية", "en": "Industrial Chemistry", "category": "Chemistry", "credits": 3},
-        {"id": "BUS307", "ar": "ريادة الأعمال", "en": "Entrepreneurship", "category": "Business", "credits": 3},
-        {"id": "BIO104", "ar": "علم المناعة", "en": "Immunology", "category": "Biology", "credits": 3},
-        {"id": "MED104", "ar": "علم الأنسجة", "en": "Histology", "category": "Medicine", "credits": 4},
-        {"id": "PHR104", "ar": "الصيدلة الحيوية", "en": "Biopharmaceutics", "category": "Pharmacy", "credits": 3},
-        {"id": "ARC104", "ar": "تصميم المباني الذكية", "en": "Smart Building Design", "category": "Architecture", "credits": 3},
-        {"id": "ENV104", "ar": "إدارة الموارد المائية", "en": "Water Resource Management", "category": "Environmental Engineering", "credits": 3},
-        {"id": "ELE205", "ar": "أنظمة الاتصالات", "en": "Communication Systems", "category": "Electrical Engineering", "credits": 3},
-        {"id": "MAT206", "ar": "التحليل الحقيقي", "en": "Real Analysis", "category": "Mathematics", "credits": 3},
-        {"id": "PHY205", "ar": "فيزياء الليزر", "en": "Laser Physics", "category": "Physics", "credits": 3},
-        {"id": "CHE205", "ar": "الكيمياء البيئية", "en": "Environmental Chemistry", "category": "Chemistry", "credits": 3},
-        {"id": "BUS308", "ar": "إدارة الجودة", "en": "Quality Management", "category": "Business", "credits": 3},
-        {"id": "ECO204", "ar": "اقتصاديات التنمية", "en": "Development Economics", "category": "Economics", "credits": 3},
-        {"id": "FIN203", "ar": "التمويل الدولي", "en": "International Finance", "category": "Finance", "credits": 3},
         {"id": "CSC312", "ar": "أنظمة الزمن الحقيقي", "en": "Real-Time Systems", "category": "Programming", "credits": 3},
-        {"id": "DS304", "ar": "تحليل البيانات التنبؤية", "en": "Predictive Data Analytics", "category": "Data Science", "credits": 3},
-        {"id": "AI304", "ar": "الذكاء الاصطناعي التوضيحي", "en": "Explainable AI", "category": "AI", "credits": 3},
-        {"id": "CYB204", "ar": "إدارة الحوادث الأمنية", "en": "Incident Management", "category": "Cybersecurity", "credits": 3},
-        {"id": "BIO105", "ar": "علم البيئة", "en": "Ecology", "category": "Biology", "credits": 3},
-        {"id": "MED105", "ar": "علم الأوبئة", "en": "Epidemiology", "category": "Medicine", "credits": 4},
-        {"id": "PHR105", "ar": "التكنولوجيا الصيدلانية", "en": "Pharmaceutical Technology", "category": "Pharmacy", "credits": 3},
-        {"id": "ARC105", "ar": "تصميم المساحات الحضرية", "en": "Urban Space Design", "category": "Architecture", "credits": 3},
-        {"id": "ENV105", "ar": "الطاقة المستدامة", "en": "Sustainable Energy", "category": "Environmental Engineering", "credits": 3},
-        {"id": "ELE206", "ar": "أنظمة الطاقة الذكية", "en": "Smart Power Systems", "category": "Electrical Engineering", "credits": 3},
-        {"id": "MAT207", "ar": "الرياضيات الحاسوبية", "en": "Computational Mathematics", "category": "Mathematics", "credits": 3},
-        {"id": "PHY206", "ar": "فيزياء المواد المتقدمة", "en": "Advanced Material Physics", "category": "Physics", "credits": 3},
-        {"id": "CHE206", "ar": "الكيمياء الحيوية المتقدمة", "en": "Advanced Biochemistry", "category": "Chemistry", "credits": 3},
-        {"id": "BUS309", "ar": "إدارة التغيير", "en": "Change Management", "category": "Business", "credits": 3},
-        {"id": "ECO205", "ar": "الاقتصاد البيئي", "en": "Environmental Economics", "category": "Economics", "credits": 3},
-        {"id": "FIN204", "ar": "إدارة المحافظ الاستثمارية", "en": "Portfolio Management", "category": "Finance", "credits": 3},
         {"id": "CSC313", "ar": "الحوسبة المتنقلة", "en": "Mobile Computing", "category": "Programming", "credits": 3},
-        {"id": "DS305", "ar": "تحليل البيانات النصية", "en": "Text Data Analytics", "category": "Data Science", "credits": 3},
         {"id": "CSC314", "ar": "برمجة التطبيقات المتنقلة", "en": "Mobile Application Programming", "category": "Programming", "credits": 3},
         {"id": "CSC315", "ar": "البرمجة المتوازية", "en": "Parallel Programming", "category": "Programming", "credits": 3},
         {"id": "CSC316", "ar": "برمجة الألعاب", "en": "Game Programming", "category": "Programming", "credits": 3},
@@ -182,12 +79,21 @@ def generate_dummy_data():
         {"id": "CSC320", "ar": "برمجة الذكاء الاصطناعي", "en": "AI Programming", "category": "Programming", "credits": 3},
         {"id": "CSC321", "ar": "برمجة قواعد البيانات", "en": "Database Programming", "category": "Programming", "credits": 3},
         {"id": "CSC322", "ar": "برمجة التطبيقات التفاعلية", "en": "Interactive Application Programming", "category": "Programming", "credits": 3},
-        {"id": "CSC323", "ar": "برمجة الأنظمة الموزعة", "en": "Distributed Systems Programming", "category": "Programming", "credits": 3}
+        {"id": "CSC323", "ar": "برمجة الأنظمة الموزعة", "en": "Distributed Systems Programming", "category": "Programming", "credits": 3},
+        {"id": "LAB101", "ar": "مختبر البرمجة 1", "en": "Programming Lab 1", "category": "Lab", "credits": 1},
+        {"id": "LAB102", "ar": "مختبر البرمجة 2", "en": "Programming Lab 2", "category": "Lab", "credits": 1},
+        {"id": "LAB201", "ar": "مختبر الشبكات", "en": "Networking Lab", "category": "Lab", "credits": 1},
+        {"id": "LAB202", "ar": "مختبر قواعد البيانات", "en": "Database Lab", "category": "Lab", "credits": 1},
+        {"id": "LAB301", "ar": "مختبر الذكاء الاصطناعي", "en": "AI Lab", "category": "Lab", "credits": 1},
+        {"id": "LAB302", "ar": "مختبر تعلم الآلة", "en": "Machine Learning Lab", "category": "Lab", "credits": 1},
+        {"id": "LAB303", "ar": "مختبر الروبوتات", "en": "Robotics Lab", "category": "Lab", "credits": 1},
+        {"id": "LAB304", "ar": "مختبر التطبيقات السحابية", "en": "Cloud Applications Lab", "category": "Lab", "credits": 1},
+        {"id": "LAB305", "ar": "مختبر أمن التطبيقات", "en": "Application Security Lab", "category": "Lab", "credits": 1},
+        {"id": "LAB306", "ar": "مختبر البرمجة المتوازية", "en": "Parallel Programming Lab", "category": "Lab", "credits": 1},
     ]
 
     all_students = []
-
-# Step 1: Create predefined students with Computer Science major
+    # Step 1: Create predefined students with Computer Science major
     for data in predefined_students:
         student = Student.objects.create(
             student_id=data["student_id"],
@@ -198,12 +104,14 @@ def generate_dummy_data():
         )
         all_students.append(student)
 
-        # Assign 8 major courses and 2 electives to predefined students
+        # Assign random major courses and electives to predefined students
         major_courses = [c for c in courses if c["category"] == "Programming"]
         other_courses = [c for c in courses if c["category"] != "Programming"]
 
-        major_taken = major_courses[:8]
-        electives = random.sample(other_courses, k=min(len(other_courses), 2))
+        num_major_courses = random.randint(5, 8)
+        num_electives = random.randint(1, 3)
+        major_taken = random.sample(major_courses, k=min(len(major_courses), num_major_courses))
+        electives = random.sample(other_courses, k=min(len(other_courses), num_electives))
 
         taken_courses = major_taken + electives
 
@@ -219,6 +127,16 @@ def generate_dummy_data():
                 student=student,
                 course=course_obj,
                 score=score
+            )
+
+        # Add remaining courses as courses to take
+        remaining_courses = [c for c in courses if c not in taken_courses]
+        for course in remaining_courses:
+            Course.objects.get_or_create(
+                name_ar=course["ar"],
+                name_en=course["en"],
+                category=course["category"],
+                credits=course["credits"]
             )
 
     # Step 2: Create random students with random majors
@@ -259,6 +177,16 @@ def generate_dummy_data():
                 student=student,
                 course=course_obj,
                 score=score
+            )
+
+        # Add remaining courses as courses to take
+        remaining_courses = [c for c in courses if c not in taken_courses]
+        for course in remaining_courses:
+            Course.objects.get_or_create(
+                name_ar=course["ar"],
+                name_en=course["en"],
+                category=course["category"],
+                credits=course["credits"]
             )
 
     return "All students added successfully!"
@@ -323,9 +251,44 @@ def calculate_recommendations(student):
 def get_student_recommendations(request, student_id):
     student = get_object_or_404(Student, student_id=student_id)
     recommendations = calculate_recommendations(student)
+    taken_grades = student.grades.all()
+    taken_courses_ids = taken_grades.values_list('course_id', flat=True)
     current_gpa = calculate_gpa(student)
 
-    # Get courses taken with scores
+    # Total credits earned
+    total_credits = sum(grade.course.credits for grade in taken_grades)
+
+    # Define credit limits based on major
+    credit_limits = {
+        "Computer Science": 136,
+        "Software Engineering": 132,
+        "Information Systems": 128,
+    }
+
+    # Get credit limit based on student's major
+    credit_limit = credit_limits.get(student.program_en, 120)  # Default to 120 if major not found
+
+    # Calculate remaining credits needed
+    remaining_credits = max(0, credit_limit - total_credits)
+
+    # Get courses left that the student has not taken yet
+    all_courses = Course.objects.exclude(id__in=taken_courses_ids)
+    random_courses_left = random.sample(
+        list(all_courses), 
+        k=min(len(all_courses), remaining_credits // 3)  # Assuming average course credits are 3
+    )
+
+    courses_left = [
+        {
+            "name_ar": course.name_ar,
+            "name_en": course.name_en,
+            "category": course.category,
+            "credits": course.credits,
+        }
+        for course in random_courses_left
+    ]
+
+    # Courses the student has taken
     taken_courses = [
         {
             "course_name_ar": grade.course.name_ar,
@@ -334,8 +297,11 @@ def get_student_recommendations(request, student_id):
             "credits": grade.course.credits,
             "score": grade.score,
         }
-        for grade in student.grades.all()
+        for grade in taken_grades
     ]
+
+    # Total number of courses taken
+    total_courses_taken = taken_grades.count()
 
     response_data = {
         "student_id": student.student_id,
@@ -344,8 +310,13 @@ def get_student_recommendations(request, student_id):
         "program_ar": student.program_ar,
         "program_en": student.program_en,
         "current_gpa": current_gpa,
+        "total_courses_taken": total_courses_taken,
+        "total_credits": total_credits,
+        "credit_limit": credit_limit,
+        "remaining_credits": remaining_credits,
         "takenCourses": taken_courses,
         "recommendedCourses": recommendations,
+        "coursesLeft": courses_left,
     }
 
     return JsonResponse(response_data)
